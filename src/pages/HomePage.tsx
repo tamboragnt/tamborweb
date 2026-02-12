@@ -47,9 +47,6 @@ function HomePage() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const scrollToHowItWorks = () => {
-    howItWorksRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <div className="min-h-screen bg-white font-poppins">
@@ -85,13 +82,15 @@ function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button
-                onClick={scrollToHowItWorks}
+              <a
+                href="https://app.arcade.software/share/HHMueHhZ36D8kxqDKMWi"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-tambor-red to-tambor-red-light hover:from-tambor-red-dark hover:to-tambor-red text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl text-lg sm:text-xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-tambor-red/25 inline-flex items-center justify-center gap-3"
               >
                 Show me how this works
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </a>
               <a
                 href="https://beta.tambor.ai/"
                 target="_blank"
@@ -182,13 +181,15 @@ function HomePage() {
               Get Access
               <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
-            <button
-              onClick={scrollToHowItWorks}
+            <a
+              href="https://app.arcade.software/share/HHMueHhZ36D8kxqDKMWi"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-2 border-white/30 hover:border-white/60 backdrop-blur-sm text-white hover:bg-white/10 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl text-lg sm:text-xl font-bold transition-all duration-500 inline-flex items-center justify-center gap-3 mx-4 sm:mx-0"
             >
               Show me how this works
               <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
-            </button>
+            </a>
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/20">

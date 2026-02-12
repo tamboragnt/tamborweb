@@ -6,12 +6,9 @@ interface Props {
 }
 
 const includedItems = [
-  'All workspaces',
-  'Daily updates',
-  'Research packs',
-  'Weekly summaries',
-  'Unlimited questions',
-  'Unlimited team seats',
+  'API access',
+  'Unlimited audience access',
+  'Voting access to request new audiences',
 ];
 
 function PricingSection({ sectionRef, isVisible }: Props) {
@@ -41,8 +38,16 @@ function PricingSection({ sectionRef, isVisible }: Props) {
               <Zap className="w-8 h-8 text-white" />
             </div>
 
+            <div className="inline-block bg-gradient-to-r from-tambor-red to-tambor-red-light px-5 py-2 rounded-full mb-6">
+              <span className="text-white font-bold text-sm sm:text-base tracking-wide">14-day free trial</span>
+            </div>
+
             <h3 className="text-2xl sm:text-3xl font-bold mb-3">One subscription. Every community.</h3>
-            <p className="text-xl sm:text-2xl font-bold text-tambor-red-light mb-10">Daily insights.</p>
+
+            <div className="mb-10">
+              <span className="text-5xl sm:text-6xl font-black">$180</span>
+              <span className="text-xl sm:text-2xl font-light text-white/70">/month</span>
+            </div>
 
             <div className="text-left max-w-sm mx-auto mb-10">
               <p className="text-white/80 font-semibold mb-4 text-center">You get:</p>
@@ -62,7 +67,7 @@ function PricingSection({ sectionRef, isVisible }: Props) {
               rel="noopener noreferrer"
               className="group bg-gradient-to-r from-tambor-red to-tambor-red-light hover:from-tambor-red-dark hover:to-tambor-red text-white px-10 py-5 rounded-2xl text-lg sm:text-xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-tambor-red/25 inline-flex items-center justify-center gap-3"
             >
-              Get Access
+              Start Free Trial
               <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </div>

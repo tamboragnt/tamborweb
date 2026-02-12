@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import IntakeModal from '../components/IntakeModal';
+import NewsletterForm from '../components/NewsletterForm';
 import HowItWorksSection from '../components/home/HowItWorksSection';
 import WhatYouGetSection from '../components/home/WhatYouGetSection';
 import WhyTamborSection from '../components/home/WhyTamborSection';
@@ -198,12 +199,11 @@ function HomePage() {
               <div className="hidden sm:block w-px h-4 bg-white/20"></div>
               <a href="https://hello.tambor.ai/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 font-medium">About Us</a>
               <div className="hidden sm:block w-px h-4 bg-white/20"></div>
-              <Link to="/weekly-insights" className="hover:text-white transition-colors duration-300 font-medium">Weekly Insights</Link>
-              <div className="hidden sm:block w-px h-4 bg-white/20"></div>
               <Link to="/legal" className="hover:text-white transition-colors duration-300 font-medium">Legal</Link>
               <div className="hidden sm:block w-px h-4 bg-white/20"></div>
               <a href="mailto:legal@tambor.ai" className="hover:text-white transition-colors duration-300 font-medium">Contact</a>
             </div>
+            <NewsletterForm />
           </div>
         </div>
       </div>

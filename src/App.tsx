@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LegalPage from './pages/LegalPage';
-import WeeklyInsightsPage from './pages/WeeklyInsightsPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/legal" element={<LegalPage />} />
-        <Route path="/weekly-insights" element={<WeeklyInsightsPage />} />
       </Routes>
     </Router>
   );

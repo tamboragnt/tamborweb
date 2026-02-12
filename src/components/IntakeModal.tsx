@@ -4,7 +4,6 @@ import { X as XIcon, ArrowRight, ArrowLeft, CheckCircle, Users, MapPin, Briefcas
 interface IntakeModalProps {
   isOpen: boolean;
   onClose: () => void;
-  sourcePage?: string;
 }
 
 interface FormData {
@@ -22,10 +21,9 @@ interface FormData {
   // Section 3: Custom Data
   customData: string;
   email: string;
-  weeklyinsights?: boolean;
 }
 
-const IntakeModal: React.FC<IntakeModalProps> = ({ isOpen, onClose, sourcePage }) => {
+const IntakeModal: React.FC<IntakeModalProps> = ({ isOpen, onClose }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [currentSection, setCurrentSection] = useState(1);
   const [formData, setFormData] = useState<FormData>({
@@ -38,7 +36,6 @@ const IntakeModal: React.FC<IntakeModalProps> = ({ isOpen, onClose, sourcePage }
     onlinePlatforms: '',
     customData: '',
     email: '',
-    weeklyinsights: sourcePage === 'weekly-insights' ? true : undefined
   });
   const [isVisible, setIsVisible] = useState(false);
 
@@ -64,7 +61,6 @@ const IntakeModal: React.FC<IntakeModalProps> = ({ isOpen, onClose, sourcePage }
         onlinePlatforms: '',
         customData: '',
         email: '',
-        weeklyinsights: sourcePage === 'weekly-insights' ? true : undefined
       });
     }, 300);
   };
@@ -142,7 +138,6 @@ const IntakeModal: React.FC<IntakeModalProps> = ({ isOpen, onClose, sourcePage }
         online_presence: formData.onlinePlatforms,
         custom_data: formData.customData,
         email: formData.email,
-        ...(formData.weeklyinsights && { weeklyinsights: formData.weeklyinsights })
       };
       
       // Send data to webhook

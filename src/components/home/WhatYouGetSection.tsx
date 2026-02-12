@@ -101,7 +101,19 @@ function WhatYouGetSection({ sectionRef, isVisible }: Props) {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-tambor-navy/5 to-tambor-blue/5 rounded-2xl p-8 border border-tambor-navy/10">
+          <div className="mt-10 group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-3 shadow-2xl overflow-hidden">
+              <img
+                src="/INTEL.png"
+                alt="Tambor Cultural Intelligence dashboard showing AI Daily Brief, tactical advice, and audience engagement metrics"
+                className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-tambor-navy/5 to-tambor-blue/5 rounded-2xl p-8 border border-tambor-navy/10 mt-10">
             <h5 className="text-lg sm:text-xl font-bold text-tambor-navy mb-6">Your audience's bot can:</h5>
             <div className="grid sm:grid-cols-2 gap-4">
               {botCapabilities.map((cap, index) => (

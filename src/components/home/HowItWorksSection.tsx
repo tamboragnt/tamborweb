@@ -85,6 +85,18 @@ const HowItWorksSection = forwardRef<HTMLDivElement, Props>(({ sectionRef, isVis
             </div>
           </div>
 
+          <div className="mb-16 group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-3 shadow-2xl overflow-hidden">
+              <img
+                src="/TrendingHT.png"
+                alt="Tambor Trending Hashtags view showing hashtag analytics, sentiment breakdowns, and creator archetypes"
+                className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, index) => (
               <div key={index} className="group">

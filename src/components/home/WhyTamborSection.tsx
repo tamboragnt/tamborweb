@@ -80,6 +80,18 @@ function WhyTamborSection({ sectionRef, isVisible }: Props) {
           </div>
         </div>
 
+        <div className="mb-16 group relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-3 shadow-2xl overflow-hidden">
+            <img
+              src="/Language.png"
+              alt="Tambor Language analysis showing audience vocabulary patterns and Vibe Check with authentic voice samples"
+              className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
         <div className="text-center mb-12">
           <h3 className="text-2xl sm:text-3xl font-bold text-tambor-navy">Why teams choose Tambor:</h3>
         </div>

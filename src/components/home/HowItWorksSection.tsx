@@ -87,7 +87,7 @@ const HowItWorksSection = forwardRef<HTMLDivElement, Props>(({ sectionRef, isVis
 
               <div className="group relative lg:-translate-y-4">
                 <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-2 shadow-2xl overflow-hidden lg:rotate-1">
+                <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-2 shadow-2xl overflow-hidden">
                   <img
                     src="/TrendingHT.png"
                     alt="Tambor Trending Hashtags view showing hashtag analytics, sentiment breakdowns, and creator archetypes"

@@ -107,7 +107,7 @@ function WhyTamborSection({ sectionRef, isVisible }: Props) {
 
           <div className="lg:col-span-2 group relative lg:-translate-y-8">
             <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-2 shadow-2xl overflow-hidden lg:rotate-1">
+            <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-2 shadow-2xl overflow-hidden">
               <img
                 src="/Language.png"
                 alt="Tambor Language analysis showing audience vocabulary patterns and Vibe Check with authentic voice samples"

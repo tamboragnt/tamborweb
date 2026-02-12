@@ -196,7 +196,7 @@ function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/60">
               <Link to="/" className="hover:text-white transition-colors duration-300 font-medium">Home</Link>
               <div className="hidden sm:block w-px h-4 bg-white/20"></div>
-              <Link to="/about" className="hover:text-white transition-colors duration-300 font-medium">About Us</Link>
+              <a href="https://hello.tambor.ai/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 font-medium">About Us</a>
               <div className="hidden sm:block w-px h-4 bg-white/20"></div>
               <Link to="/weekly-insights" className="hover:text-white transition-colors duration-300 font-medium">Weekly Insights</Link>
               <div className="hidden sm:block w-px h-4 bg-white/20"></div>

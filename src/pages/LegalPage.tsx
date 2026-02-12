@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { ArrowLeft, Shield, FileText, Scale, Eye } from 'lucide-react';
 
 function LegalPage() {
@@ -7,6 +8,12 @@ function LegalPage() {
 
   return (
     <div className="min-h-screen bg-white font-poppins">
+      <SEOHead
+        title="Legal - Terms of Use & Privacy Statement | Tambor"
+        description="Tambor's legal policies including Terms of Use and Privacy Statement. Our commitment to transparency, privacy, and responsible AI practices."
+        canonical="https://tambor.ai/legal"
+        noindex
+      />
       {/* Header */}
       <div className="bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy py-16 lg:py-24 relative overflow-hidden">
         {/* Background elements */}

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import IntakeModal from '../components/IntakeModal';
 import NewsletterForm from '../components/NewsletterForm';
 import HowItWorksSection from '../components/home/HowItWorksSection';
@@ -10,6 +11,12 @@ import UseCasesSection from '../components/home/UseCasesSection';
 import PricingSection from '../components/home/PricingSection';
 import BespokeSection from '../components/home/BespokeSection';
 import FaqSection from '../components/home/FaqSection';
+import {
+  organizationSchema,
+  websiteSchema,
+  productSchema,
+  faqSchema,
+} from '../seo/structured-data';
 import { ArrowRight, Eye } from 'lucide-react';
 
 function HomePage() {
@@ -48,12 +55,17 @@ function HomePage() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-
   return (
     <div className="min-h-screen bg-white font-poppins">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
+      <SEOHead
+        title="Tambor | AI-Powered TikTok Cultural Intelligence"
+        description="Tambor tracks TikTok communities daily so you don't have to doom-scroll. Get instant cultural intelligence, trending insights, and audience analysis. Daily. Clear. Zero guesswork."
+        canonical="https://tambor.ai/"
+        structuredData={[organizationSchema, websiteSchema, productSchema, faqSchema]}
+      />
+
+      <header className="bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy py-16 lg:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-tambor-red opacity-10 rounded-full blur-3xl animate-float animate-morph" style={{ top: '20%', left: '10%' }}></div>
           <div className="absolute w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-tambor-blue opacity-15 rounded-full blur-3xl animate-float animate-morph" style={{ top: '60%', right: '15%', animationDelay: '2s' }}></div>
         </div>
@@ -104,57 +116,58 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      <HowItWorksSection
-        ref={howItWorksRef}
-        sectionRef={el => sectionRefs.current[0] = el}
-        isVisible={visibleSections.includes(0)}
-      />
+      <main>
+        <HowItWorksSection
+          ref={howItWorksRef}
+          sectionRef={el => sectionRefs.current[0] = el}
+          isVisible={visibleSections.includes(0)}
+        />
 
-      <WhatYouGetSection
-        sectionRef={el => sectionRefs.current[1] = el}
-        isVisible={visibleSections.includes(1)}
-      />
+        <WhatYouGetSection
+          sectionRef={el => sectionRefs.current[1] = el}
+          isVisible={visibleSections.includes(1)}
+        />
 
-      <WhyTamborSection
-        sectionRef={el => sectionRefs.current[2] = el}
-        isVisible={visibleSections.includes(2)}
-      />
+        <WhyTamborSection
+          sectionRef={el => sectionRefs.current[2] = el}
+          isVisible={visibleSections.includes(2)}
+        />
 
-      <WhoItsForSection
-        sectionRef={el => sectionRefs.current[3] = el}
-        isVisible={visibleSections.includes(3)}
-      />
+        <WhoItsForSection
+          sectionRef={el => sectionRefs.current[3] = el}
+          isVisible={visibleSections.includes(3)}
+        />
 
-      <UseCasesSection
-        sectionRef={el => sectionRefs.current[4] = el}
-        isVisible={visibleSections.includes(4)}
-      />
+        <UseCasesSection
+          sectionRef={el => sectionRefs.current[4] = el}
+          isVisible={visibleSections.includes(4)}
+        />
 
-      <PricingSection
-        sectionRef={el => sectionRefs.current[5] = el}
-        isVisible={visibleSections.includes(5)}
-      />
+        <PricingSection
+          sectionRef={el => sectionRefs.current[5] = el}
+          isVisible={visibleSections.includes(5)}
+        />
 
-      <BespokeSection
-        sectionRef={el => sectionRefs.current[6] = el}
-        isVisible={visibleSections.includes(6)}
-      />
+        <BespokeSection
+          sectionRef={el => sectionRefs.current[6] = el}
+          isVisible={visibleSections.includes(6)}
+        />
 
-      <FaqSection
-        sectionRef={el => sectionRefs.current[7] = el}
-        isVisible={visibleSections.includes(7)}
-      />
+        <FaqSection
+          sectionRef={el => sectionRefs.current[7] = el}
+          isVisible={visibleSections.includes(7)}
+        />
+      </main>
 
-      {/* Closing CTA Section */}
-      <div
+      <footer
         ref={el => sectionRefs.current[8] = el}
         className={`bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy py-24 lg:py-32 relative overflow-hidden animate-gradient-shift transition-all duration-1000 ${
           visibleSections.includes(8) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-tambor-red opacity-10 rounded-full blur-3xl top-20 right-20 animate-float animate-morph"></div>
           <div className="absolute w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-tambor-blue opacity-15 rounded-full blur-3xl bottom-20 left-20 animate-float animate-morph" style={{ animationDelay: '3s' }}></div>
         </div>
@@ -194,19 +207,19 @@ function HomePage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-white/20">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/60">
+            <nav aria-label="Footer navigation" className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/60">
               <Link to="/" className="hover:text-white transition-colors duration-300 font-medium">Home</Link>
-              <div className="hidden sm:block w-px h-4 bg-white/20"></div>
+              <div className="hidden sm:block w-px h-4 bg-white/20" aria-hidden="true"></div>
               <a href="https://hello.tambor.ai/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300 font-medium">About Us</a>
-              <div className="hidden sm:block w-px h-4 bg-white/20"></div>
+              <div className="hidden sm:block w-px h-4 bg-white/20" aria-hidden="true"></div>
               <Link to="/legal" className="hover:text-white transition-colors duration-300 font-medium">Legal</Link>
-              <div className="hidden sm:block w-px h-4 bg-white/20"></div>
+              <div className="hidden sm:block w-px h-4 bg-white/20" aria-hidden="true"></div>
               <a href="mailto:legal@tambor.ai" className="hover:text-white transition-colors duration-300 font-medium">Contact</a>
-            </div>
+            </nav>
             <NewsletterForm />
           </div>
         </div>
-      </div>
+      </footer>
 
       <IntakeModal isOpen={isModalOpen} onClose={closeModal} />
     </div>

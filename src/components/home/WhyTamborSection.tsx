@@ -80,37 +80,57 @@ function WhyTamborSection({ sectionRef, isVisible }: Props) {
           </div>
         </div>
 
-        <div className="mb-16 group relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-          <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-3 shadow-2xl overflow-hidden">
-            <img
-              src="/Language.png"
-              alt="Tambor Language analysis showing audience vocabulary patterns and Vibe Check with authentic voice samples"
-              className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
-              loading="lazy"
-            />
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start mb-12">
+          <div className="lg:col-span-3">
+            <h3 className="text-2xl sm:text-3xl font-bold text-tambor-navy mb-8">Why teams choose Tambor:</h3>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {differentiators.slice(0, 4).map((item, index) => (
+                <div key={index} className="group">
+                  <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border border-gray-100 relative overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-tambor-blue/5 to-tambor-red/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative z-10">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-tambor-blue to-tambor-red flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500 mb-4">
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-base sm:text-lg font-bold text-tambor-navy mb-1 group-hover:text-tambor-blue transition-colors duration-300">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="lg:col-span-2 group relative lg:-translate-y-8">
+            <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-2 shadow-2xl overflow-hidden lg:rotate-1">
+              <img
+                src="/Language.png"
+                alt="Tambor Language analysis showing audience vocabulary patterns and Vibe Check with authentic voice samples"
+                className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="text-center mb-12">
-          <h3 className="text-2xl sm:text-3xl font-bold text-tambor-navy">Why teams choose Tambor:</h3>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {differentiators.map((item, index) => (
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
+          {differentiators.slice(4).map((item, index) => (
             <div key={index} className="group">
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border border-gray-100 relative overflow-hidden h-full">
+              <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border border-gray-100 relative overflow-hidden h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-tambor-blue/5 to-tambor-red/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-tambor-blue to-tambor-red flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500 mb-6">
-                    <item.icon className="w-7 h-7 text-white" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-tambor-blue to-tambor-red flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500 mb-4">
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
-
-                  <h4 className="text-lg sm:text-xl font-bold text-tambor-navy mb-2 group-hover:text-tambor-blue transition-colors duration-300">
+                  <h4 className="text-base sm:text-lg font-bold text-tambor-navy mb-1 group-hover:text-tambor-blue transition-colors duration-300">
                     {item.title}
                   </h4>
-                  <p className="text-base text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {item.description}
                   </p>
                 </div>

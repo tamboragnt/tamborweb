@@ -57,43 +57,45 @@ const HowItWorksSection = forwardRef<HTMLDivElement, Props>(({ sectionRef, isVis
           </div>
 
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100 mb-16">
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                TikTok is split into ecosystems — BeautyTok, CleanTok, MoneyTok, FoodTok, Gaming, SkincareTok, all the Toks you pretend to know but definitely don't track daily.
-              </p>
-
-              <p className="text-lg sm:text-xl text-tambor-navy font-semibold mb-6">
-                Tambor watches them for you. Every day, we break down:
-              </p>
-
-              <div className="space-y-4 mb-10">
-                {breakdownItems.map((item, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-tambor-red to-tambor-red-light flex items-center justify-center shadow-lg flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-base sm:text-lg text-gray-700 font-medium">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="bg-gradient-to-r from-tambor-red/10 to-tambor-blue/10 rounded-2xl p-8 border border-tambor-red/20">
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                  Tambor synthesizes video transcripts, captions, comment conversations, hashtag patterns, and engagement metrics (views + likes) into cultural intelligence you can actually use.
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div>
+                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
+                  TikTok is split into ecosystems — BeautyTok, CleanTok, MoneyTok, FoodTok, Gaming, SkincareTok, all the Toks you pretend to know but definitely don't track daily.
                 </p>
-              </div>
-            </div>
-          </div>
 
-          <div className="mb-16 group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-3 shadow-2xl overflow-hidden">
-              <img
-                src="/TrendingHT.png"
-                alt="Tambor Trending Hashtags view showing hashtag analytics, sentiment breakdowns, and creator archetypes"
-                className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
-                loading="lazy"
-              />
+                <p className="text-lg sm:text-xl text-tambor-navy font-semibold mb-6">
+                  Tambor watches them for you. Every day, we break down:
+                </p>
+
+                <div className="space-y-4 mb-10">
+                  {breakdownItems.map((item, index) => (
+                    <div key={index} className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-tambor-red to-tambor-red-light flex items-center justify-center shadow-lg flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-base sm:text-lg text-gray-700 font-medium">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-gradient-to-r from-tambor-red/10 to-tambor-blue/10 rounded-2xl p-6 border border-tambor-red/20">
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Tambor synthesizes video transcripts, captions, comment conversations, hashtag patterns, and engagement metrics (views + likes) into cultural intelligence you can actually use.
+                  </p>
+                </div>
+              </div>
+
+              <div className="group relative lg:-translate-y-4">
+                <div className="absolute -inset-1 bg-gradient-to-r from-tambor-blue/20 to-tambor-red/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div className="relative bg-gradient-to-br from-tambor-navy via-tambor-blue-dark to-tambor-navy rounded-2xl p-2 shadow-2xl overflow-hidden lg:rotate-1">
+                  <img
+                    src="/TrendingHT.png"
+                    alt="Tambor Trending Hashtags view showing hashtag analytics, sentiment breakdowns, and creator archetypes"
+                    className="w-full rounded-xl transition-transform duration-700 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 

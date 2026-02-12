@@ -1,0 +1,21 @@
+{
+  "name": "Tambor - AI-Powered TikTok Cultural Intelligence",
+  "short_name": "Tambor",
+  "description": "Track TikTok communities daily. Get instant cultural intelligence, trending insights, and audience analysis.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#060E2E",
+  "background_color": "#060E2E",
+  "icons": [
+    {
+      "src": "/monogram.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/monogram.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
